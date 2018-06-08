@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="UTF-8">
+    <title>Psychic Game</title>
+  </head>
+  <body>
+
+    <div id="game">
+
+    </div>
+
+    <script type="text/javascript">
+      
+      var computerChoices = ["m", "i", "r", "t", "a", "l", "k", "h", "n"];
+      var wins = 0;
+      var losses = 0;
+      var guessesLeft = 9;
+      var yourGuessesSoFar = [];
+      var totalwins = 0;
+      var totallosses = 0;
+      
+      
+document.write("<p><h1>The Psychic Game</h1></p>");
+document.write("<p><h3>Guess what letters I'm thinking of</h3></p>");
+document.write("<p>wins: " + wins + "</p>");
+document.write("<p>losses: " + losses + "</p>");
+document.write("<p>guessesLeft: " + guessesLeft + "</p>" );
+document.write("<p>your Guesses So Far: " + yourGuessesSoFar + "</p>");
+      
+     var computerChoices = ["m", "i", "r", "t", "a", "l", "k", "h", "n"];
+      
+       document.onkeyup = function(event) {
+        
+        var userGuess = [];
+        var userGuess = event.key;
+        var computerGuess = computerChoices[Math.floor(Math.random() * computerChoices.length)];
+      
+     
+  for (var i=0; i<9; i++) {  
+    yourGuessesSoFar.push(prompt("what is your GuessesSoFar"));
+    
+      if (userGuess == computerGuess) {
+        totalwins++; 
+        guessesLeft--;}
+     else {
+      totallosses++; 
+     guessesLeft--;}
+  }; 
+  alert("Please refresh browser page to reset parameters");
+if (totalwins>0) { wins++; }
+else {losses++;}
+document.write("<p><h1>The Psychic Game</h1></p>");
+document.write("<p><h3>Guess what letters I'm thinking of</h3></p>");
+document.write("<p>wins: " + wins + "</p>");
+document.write("<p>losses: " + losses + "</p>");
+document.write("<p>guessesLeft: " + guessesLeft + "</p>" );
+document.write("<p>your Guesses So Far: " + yourGuessesSoFar + "</p>");
+    }
+while(i>9)
+{     
+       document.onkeyup = function(event) {
+        
+ var computerChoices = ["m", "i", "r", "t", "a", "l", "k", "h", "n"];
+      var wins = 0;
+      var losses = 0;
+      var guessesLeft = 9;
+      var yourGuessesSoFar = [];
+      var totalwins = 0;
+      var totallosses = 0;
+      
+document.write("<p>totalwins: " + totalwins + "</p>");
+document.write("<p>totallosses: " + totallosses + "</p>");
+document.write("<p><h1>The Psychic Game</h1></p>");
+document.write("<p><h3>Guess what letters I'm thinking of</h3></p>");
+document.write("<p>wins: " + wins + "</p>");
+document.write("<p>losses: " + losses + "</p>");
+document.write("<p>guessesLeft: " + guessesLeft + "</p>" );
+document.write("<p>your Guesses So Far: " + yourGuessesSoFar + "</p>");
+      
+};
+};  
+    </script>
+
+  </body>
+</html>
